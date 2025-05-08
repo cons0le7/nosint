@@ -36,7 +36,7 @@ menu = """
 def backup():
     os.system("clear")
     print(banner)
-    print("\n\n                <Backup>            ")
+    print("\n\n                    <Backup>            ")
     home_dir = os.path.expanduser("~")
     source_dir = os.path.join(home_dir, "nosint", "saved")
     target_dir = os.path.join(home_dir, ".nosint")
@@ -45,7 +45,7 @@ def backup():
         input(f"\nSource directory '{source_dir}' does not exist. Backup cannot proceed. \n\n >>> ")
         main()    
     if os.path.exists(target_saved_dir):
-        backup_response = input(f"\nThe folder '{target_saved_dir}' already exists. Duplicate file names will be overwritten. Do you want to continue? (y/n): ").strip().lower()
+        backup_response = input(f"\nThe folder '{target_saved_dir}' already exists. \nDuplicate file names will be overwritten. Do you want to continue? (y/n): ").strip().lower()
         if backup_response != 'y':
             print("\nBackup operation canceled. \n\n >>> ")
             main()
@@ -61,7 +61,7 @@ def backup():
 def restore():
     os.system("clear")
     print(banner)
-    print("\n\n                <Restore>            ")
+    print("\n\n                    <Restore>            ")
     home_dir = os.path.expanduser("~")
     source_dir = os.path.join(home_dir, ".nosint", "saved")
     target_dir = os.path.join(home_dir, "nosint")
@@ -75,7 +75,7 @@ def restore():
     else:
         print(f"\nTarget directory '{target_dir}' already exists.")    
     if os.path.exists(target_saved_dir):
-        restore_response = input(f"\nThe folder '{target_saved_dir}' already exists. Duplicate file names will be overwritten. Do you want to continue? (y/n): ").strip().lower()
+        restore_response = input(f"\nThe folder '{target_saved_dir}' already exists. \nDuplicate file names will be overwritten. Do you want to continue? (y/n): ").strip().lower()
         if restore_response != 'y':
             input("\nRestore operation canceled. \n\n >>> ")
             main()
