@@ -8,7 +8,15 @@ You will first need to [Register](https://nosint.org/auth/register) at nosint.or
 
 ## 🛠️ Install 🛠️
 
-### iSH:
+[![Arch Linux](https://img.shields.io/badge/Arch%20Linux-%230C8BDC?style=for-the-badge&logo=arch-linux&logoColor=white)](#)
+
+[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#)
+
+[![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=fff)](#)
+
+
+### [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](#) 
+ iSH:
 - Install dependencies: 
 ```
 apk add git bash python3 py3-pip py3-colorama
