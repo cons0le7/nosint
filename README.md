@@ -1,9 +1,9 @@
 # nosint
 API wrapper for NoSINT 
 
-# 🛠️ Install:
+# 🛠️ Install 🛠️
 
-### iSH
+### iSH:
 - Install dependencies: 
 ```
 apk add git
