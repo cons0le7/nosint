@@ -16,7 +16,7 @@ apk add py3-colorama
 ```
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
-chmod +x $HOME/nosint/nosint $HOME/nosint/update.sh
+chmod +x $HOME/nosint/nosint $HOME/nosint/update.sh $HOME/nosint/update_2.sh 
 ln -s $HOME/nosint/nosint /usr/bin/nosint
 nosint
 ```
@@ -32,7 +32,7 @@ pip install colorama
 ```
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
-chmod +x $HOME/nosint/nosint $HOME/nosint/update.sh
+chmod +x $HOME/nosint/nosint $HOME/nosint/update.sh $HOME/nosint/update_2.sh 
 ln -s $HOME/nosint/nosint /data/data/com.termux/files/usr/bin/nosint
 nosint
 ```
