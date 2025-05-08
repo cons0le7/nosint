@@ -6,5 +6,5 @@ echo ""
 echo "Update Successful. Press Enter to close script."
 echo ""
 read -p " >>> "
-nosint
+exec "nosint"
 exit 0
