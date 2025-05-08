@@ -7,13 +7,8 @@ if [ ! -d "$HOME_PATH" ]; then
     echo ""
     git clone "$REPO_URL" "$HOME_PATH" 
     chmod +x "$HOME_PATH/update.sh"
-    exec "$HOME_PATH/update.sh"
-    chmod +x "$HOME_PATH/nosint"
-    echo ""
-    echo "Update Successful. Press Enter to close script."
-    echo ""
-    read -p " >>> "
-    nosint
+    chmod +x "$HOME_PATH/update_2.sh"
+    exec "$HOME_PATH/update_2.sh"
     exit 0
 else
     echo ""
@@ -21,12 +16,7 @@ else
     BRANCH_NAME=$(git -C "$HOME_PATH" rev-parse --abbrev-ref HEAD)
     git -C "$HOME_PATH" reset --hard "origin/$BRANCH_NAME"
     chmod +x "$HOME_PATH/update.sh"
-    exec "$HOME_PATH/update.sh"
-    chmod +x "$HOME_PATH/nosint"
-    echo ""
-    echo "Update Successful. Press Enter to close script."
-    echo ""
-    read -p " >>> "
-    nosint
-    exit 0
+    chmod +x "$HOME_PATH/update_2.sh"
+    exec "$HOME_PATH/update_2.sh"
+    exit 0 
 fi
