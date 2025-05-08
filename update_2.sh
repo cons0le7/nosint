@@ -8,4 +8,5 @@ echo ""
 echo "reloading tool... "
 sleep 1 
 exec "nosint"
+exit 0
 
