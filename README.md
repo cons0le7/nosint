@@ -7,6 +7,7 @@ API wrapper for NoSINT
 - Install dependencies: 
 ```
 apk add git
+apk add bash
 apk add python3
 apk add py3-pip
 apk add py3-colorama
