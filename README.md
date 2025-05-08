@@ -1,5 +1,5 @@
 # NoSINT 
-[NoSINT](https://nosint.org) API wrapper available on Arch, Debian, Android with Termux and iOS with iSH Shell.
+API wrapper for [NoSINT](https://nosint.org). Works on Arch, Debian, Android with Termux and iOS with iSH Shell.
 
 ![Image](https://github.com/user-attachments/assets/8dc14107-9b0a-4fea-bcab-69638480f44e)
 
