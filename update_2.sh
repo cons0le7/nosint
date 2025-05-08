@@ -7,5 +7,5 @@ echo "Update Successful. Press Enter to reload script."
 echo ""
 read -p " >>> "
 echo "reloading..."
-bash nosint
-exit 0
+bash "nosint"
+
