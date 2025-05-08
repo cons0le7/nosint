@@ -4,9 +4,8 @@ chmod +x "$HOME/nosint/nosint"
 chmod +x "$HOME/nosint/update.sh"
 echo ""
 echo "Update Successful."
+echo "Reload script by calling 'nosint' in terminal"
 echo ""
-echo "reloading tool... "
-sleep 1 
-sh -c "$HOME/nosint/nosint"
+echo "Exiting... "
 exit 0
 
