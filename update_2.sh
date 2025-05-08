@@ -7,6 +7,6 @@ echo "Update Successful."
 echo ""
 echo "reloading tool... "
 sleep 1 
-exec "$HOME/nosint/nosint"
+sh -c "$HOME/nosint/nosint"
 exit 0
 
