@@ -5,7 +5,7 @@ chmod +x "$HOME/nosint/update.sh"
 echo ""
 echo "Update Successful. Press Enter to reload script."
 echo ""
-read -p " >>> "
-echo "reloading..."
-"$HOME/nosint/nosint
+echo "reloading... "
+sleep 1 
+"$HOME/nosint/nosint"
 
