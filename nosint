@@ -162,22 +162,9 @@ def update_tool():
     if update_tool_choice == "y": 
         os.system("clear")
         print(banner)
-        try:
-            if not os.path.isdir(home_path):
-                print("\n")
-                subprocess.run(["git", "clone", repo_url, home_path], check=True)
-                input("\nUpdate successful. Press Enter to close script. \n\n >>> ")
-                sys.exit()
-            else:
-                subprocess.run(["git", "-C", home_path, "fetch"], check=True)
-                branch_name = subprocess.check_output(["git", "-C", home_path, "rev-parse", "--abbrev-ref", "HEAD"]).decode().strip()
-                subprocess.run(["git", "-C", home_path, "reset", "--hard", f"origin/{branch_name}"], check=True)
-                input("\nUpdate successful. Press Enter to close script. \n\n >>> ")
-                sys.exit()
-        except subprocess.CalledProcessError as e:
-            print(f"\nAn error occurred while updating tool: {e}")
-            input("\nAborting. Press enter to return to main menu. \n\n >>> ")
-            main()
+        bash_script_path = os.path.expanduser("~/nosint/update.sh")
+        subprocess.Popen([bash_script_path])
+        sys.exit()
     else: 
         os.system("clear")
         print(banner)
