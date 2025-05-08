@@ -1,12 +1,12 @@
 # NoSINT 
 [NoSINT](https://nosint.org) API wrapper available on Arch, Debian, Android with Termux and iOS with iSH Shell. 
 
-# ⚠️ Before Installing ⚠️
+## ⚠️ Before Installing ⚠️
 You will first need to [Register](https://nosint.org/auth/register) at nosint.org and acquire your API token from  [Dashboard](https://nosint.org/auth/register)
 
 ![Image](https://github.com/user-attachments/assets/8dc14107-9b0a-4fea-bcab-69638480f44e)
 
-# 🛠️ Install 🛠️
+## 🛠️ Install 🛠️
 
 ### iSH:
 - Install dependencies: 
