@@ -66,3 +66,7 @@ chmod +x ~/nosint/nosint ~/nosint/update.sh ~/nosint/update_2.sh
 sudo ln -s ~/nosint/nosint /usr/bin/nosint
 sudo nosint
 ```
+
+## Notes: 
+- If you choose to store token it will be stored in `~/.nosint/api.key`
+- Saved responses are stored in `~/nosint/saved`
