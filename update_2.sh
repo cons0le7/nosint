@@ -7,5 +7,5 @@ echo "Update Successful. Press Enter to reload script."
 echo ""
 read -p " >>> "
 echo "reloading..."
-bash "nosint"
+./$HOME/nosint/nosint
 
