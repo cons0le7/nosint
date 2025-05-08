@@ -13,8 +13,5 @@ cd $HOME
 git clone https://github.com/cons0le7/nosint.git
 chmod +x $HOME/nosint/nosint
 mv $HOME/nosint/nosint /usr/bin
-```
-Execute in terminal: 
-```
 nosint
 ```
