@@ -12,6 +12,6 @@ apk add py3-colorama
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
 chmod +x $HOME/nosint/nosint
-mv $HOME/nosint/nosint /usr/bin
+ln -s $HOME/nosint/nosint /usr/local/bin/nosint
 nosint
 ```
