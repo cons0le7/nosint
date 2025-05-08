@@ -1,4 +1,4 @@
-# nosint
+# NoSINT 
 API wrapper for NoSINT 
 
 # 🛠️ Install 🛠️
