@@ -4,7 +4,7 @@ API wrapper for NoSINT
 # 🛠️ Install:
 
 - iSH
-  Install dependencies: 
+Install dependencies: 
 ```
 apk add git
 apk add python3
