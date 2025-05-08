@@ -1,5 +1,5 @@
 # NoSINT 
-API wrapper for NoSINT 
+API wrapper for [NoSINT](https://nosint.org)
 
 
 ![Image](https://github.com/user-attachments/assets/8dc14107-9b0a-4fea-bcab-69638480f44e)
