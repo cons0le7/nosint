@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import json
+import shutil
 import requests
 import subprocess
 from colorama import init, Fore, Style
@@ -23,14 +24,68 @@ banner = r"""
       ━══════\/══════════════\/═════════════\/════━
                                  nosint.org"""
 menu = """
-                ╔═════════════════════╗
-                ║   [1] Search        ║
-                ║   [2] Update Token  ║
-                ║   [3] Update Tool   ║
-                ║   [x] Exit          ║
-                ╚═════════════════════╝
+                ╔══════════════════════╗
+                ║   [1] Search         ║
+                ║   [2] Update Token   ║
+                ║   [3] Update Tool    ║
+                ║   [4] Backup Saves   ║
+                ║   [5] Restore Saves  ║
+                ║   [x] Exit           ║
+                ╚══════════════════════╝
 """
-
+def backup():
+    os.system("clear")
+    print(banner)
+    home_dir = os.path.expanduser("~")
+    source_dir = os.path.join(home_dir, "nosint", "saved")
+    target_dir = os.path.join(home_dir, ".nosint")
+    target_saved_dir = os.path.join(target_dir, "saved")    
+    if not os.path.exists(source_dir):
+        input(f"\nSource directory '{source_dir}' does not exist. Backup cannot proceed. \n\n >>> ")
+        main()    
+    if os.path.exists(target_saved_dir):
+        response = input(f"\nThe folder '{target_saved_dir}' already exists. Duplicate file names will be overwritten. Do you want to continue? (y/n): ").strip().lower()
+        if response != 'y':
+            print("\nBackup operation canceled. \n\n >>> ")
+            main()
+        print(f"\nRemoving existing folder '{target_saved_dir}'.")
+        shutil.rmtree(target_saved_dir)
+    else:
+        print("\n")    
+    print(f"\nCopying '{source_dir}' to '{target_dir}'.")
+    shutil.copytree(source_dir, target_saved_dir)
+    input("\nBackup completed successfully.\n\n >>> ")
+    main() 
+    
+def restore():
+    os.system("clear")
+    print(banner)
+    home_dir = os.path.expanduser("~")
+    source_dir = os.path.join(home_dir, ".nosint", "saved")
+    target_dir = os.path.join(home_dir, "nosint")
+    target_saved_dir = os.path.join(target_dir, "saved")    
+    if not os.path.exists(source_dir):
+        input(f"\nSource directory '{source_dir}' does not exist. Restore cannot proceed. \n\n >>> ")
+        main()    
+    if not os.path.exists(target_dir):
+        print(f"\nTarget directory '{target_dir}' does not exist. Creating it.")
+        os.makedirs(target_dir)
+    else:
+        print(f"\nTarget directory '{target_dir}' already exists.")    
+    if os.path.exists(target_saved_dir):
+        response = input(f"\nThe folder '{target_saved_dir}' already exists. Duplicate file names will be overwritten. Do you want to continue? (y/n): ").strip().lower()
+        if response != 'y':
+            input("\nRestore operation canceled. \n\n >>> ")
+            main()
+        print(f"\nRemoving existing folder '{target_saved_dir}'.")
+        shutil.rmtree(target_saved_dir)
+    else:
+        print("\n")    
+    print(f"\nMoving '{source_dir}' to '{target_dir}'.")
+    shutil.move(source_dir, target_dir)
+    input("\nRestore completed successfully. \n\n >>> ")
+    main()
+    
 def get_api_key():
     os.system("clear")
     print(banner)
@@ -83,7 +138,7 @@ def update_token():
         new_api_key = input("\nPlease enter your new API key: ").strip()
         if new_api_key:
             try:
-                api_key_path = os.path.join(os.environ['HOME'], '.nosint', 'api.key')
+                api_key_path = os.path.join(os.environ['HOME'], 'nosint', 'api.key')
                 os.makedirs(os.path.dirname(api_key_path), exist_ok=True)
                 with open(api_key_path, "w") as f:
                     f.write(new_api_key)
@@ -102,7 +157,8 @@ def update_token():
 def update_tool():
     os.system("clear")
     print(banner)
-    update_tool_choice = input("\nUpdate tool? (y/n): \n\n >>> ").strip().lower()
+    print("\nUpdating tool will delete saved data. \nMake sure you have backed up your files first.")
+    update_tool_choice = input("\nProceed to update? (y/n): \n\n >>> ").strip().lower()
     if update_tool_choice == "y": 
         os.system("clear")
         print(banner)
@@ -113,12 +169,13 @@ def update_tool():
                 input("\nUpdate successful. Press Enter to close script. \n\n >>> ")
                 sys.exit()
             else:
-                print("\n")
-                subprocess.run(["git", "-C", home_path, "pull"], check=True)
+                subprocess.run(["git", "-C", home_path, "fetch"], check=True)
+                branch_name = subprocess.check_output(["git", "-C", home_path, "rev-parse", "--abbrev-ref", "HEAD"]).decode().strip()
+                subprocess.run(["git", "-C", home_path, "reset", "--hard", f"origin/{branch_name}"], check=True)
                 input("\nUpdate successful. Press Enter to close script. \n\n >>> ")
                 sys.exit()
         except subprocess.CalledProcessError as e:
-            print(f"\nAn error occurred while updating tool: {e}")  
+            print(f"\nAn error occurred while updating tool: {e}")
             input("\nAborting. Press enter to return to main menu. \n\n >>> ")
             main()
     else: 
@@ -176,6 +233,10 @@ def main():
         update_token()
     elif menu_choice == "3":
         update_tool()
+    elif menu_choice == "4":
+        backup()
+    elif menu_choice == "5":
+        restore()
     elif menu_choice == "x":
         os.system("clear")
         sys.exit()
