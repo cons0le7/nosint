@@ -15,8 +15,7 @@ You will first need to [Register](https://nosint.org/auth/register) at nosint.or
 [![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=fff)](#)
 
 
-### [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](#) 
- iSH:
+### [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](#) iSH:
 - Install dependencies: 
 ```
 apk add git bash python3 py3-pip py3-colorama
