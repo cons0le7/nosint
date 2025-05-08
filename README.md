@@ -3,7 +3,7 @@ API wrapper for NoSINT
 
 # 🛠️ Install:
 
-- iSH/iOS 
+- iSH 
 ```
 apk add git
 apk add python3
