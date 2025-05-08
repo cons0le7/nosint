@@ -8,7 +8,7 @@ from colorama import init, Fore, Style
 
 base_url = "https://nosint.org/api/stream-search"
 api_key = None
-repo_url = "https://github.com/console7/nosint"
+repo_url = "https://github.com/cons0le7/nosint"
 home_path = os.environ['HOME']
 
 
