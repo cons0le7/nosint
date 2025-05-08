@@ -9,7 +9,7 @@ from colorama import init, Fore, Style
 base_url = "https://nosint.org/api/stream-search"
 api_key = None
 repo_url = "https://github.com/cons0le7/nosint.git"
-home_path = os.environ['HOME']
+home_path = os.environ['HOME','nosint']
 
 
 banner = r"""
