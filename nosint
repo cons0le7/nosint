@@ -36,6 +36,7 @@ menu = """
 def backup():
     os.system("clear")
     print(banner)
+    print("            <Backup>            ")
     home_dir = os.path.expanduser("~")
     source_dir = os.path.join(home_dir, "nosint", "saved")
     target_dir = os.path.join(home_dir, ".nosint")
@@ -60,6 +61,7 @@ def backup():
 def restore():
     os.system("clear")
     print(banner)
+    print("            <Restore>            ")
     home_dir = os.path.expanduser("~")
     source_dir = os.path.join(home_dir, ".nosint", "saved")
     target_dir = os.path.join(home_dir, "nosint")
