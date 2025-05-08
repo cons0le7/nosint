@@ -8,9 +8,10 @@ API wrapper for NoSINT
 apk add git
 apk add python3
 apk add py3-pip
-pip3 install requests
+apk add py3-colorama
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
+chmod +x $HOME/nosint/nosint
 mv $HOME/nosint/nosint /usr/bin
 ```
 Execute in terminal: 
