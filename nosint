@@ -83,7 +83,7 @@ def update_token():
         new_api_key = input("\nPlease enter your new API key: ").strip()
         if new_api_key:
             try:
-                api_key_path = os.path.join(os.environ['HOME'], 'nosint', 'api.key')
+                api_key_path = os.path.join(os.environ['HOME'], '.nosint', 'api.key')
                 os.makedirs(os.path.dirname(api_key_path), exist_ok=True)
                 with open(api_key_path, "w") as f:
                     f.write(new_api_key)
