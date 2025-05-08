@@ -3,8 +3,9 @@
 chmod +x "$HOME/nosint/nosint"
 chmod +x "$HOME/nosint/update.sh"
 echo ""
-echo "Update Successful. Press Enter to close script."
+echo "Update Successful. Press Enter to reload script."
 echo ""
 read -p " >>> "
-exec "$HOME/nosint/nosint"
+echo "reloading..."
+bash nosint
 exit 0
