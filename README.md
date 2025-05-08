@@ -8,7 +8,8 @@ You will first need to [Register](https://nosint.org/auth/register) at nosint.or
 
 ## 🛠️ Install 🛠️
 
-### [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](#) iSH:
+### [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](#):
+In iSH Shell: 
 - Install dependencies: 
 ```
 apk add git bash python3 py3-pip py3-colorama
@@ -21,7 +22,8 @@ chmod +x $HOME/nosint/nosint $HOME/nosint/update.sh $HOME/nosint/update_2.sh
 ln -s $HOME/nosint/nosint /usr/bin/nosint
 nosint
 ```
-### [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#) Termux: 
+### [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#): 
+In Termux: 
 - Install dependencies: 
 ```
 apt-get install git python3 pip
@@ -35,7 +37,7 @@ chmod +x $HOME/nosint/nosint $HOME/nosint/update.sh $HOME/nosint/update_2.sh
 ln -s $HOME/nosint/nosint /data/data/com.termux/files/usr/bin/nosint
 nosint
 ```
-### [![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=fff)](#) Debian: 
+### [![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=fff)](#): 
 - Install dependencies: 
 ```
 sudo apt-get update
@@ -50,7 +52,7 @@ chmod +x ~/nosint/nosint ~/nosint/update.sh ~/nosint/update_2.sh
 sudo ln -s ~/nosint/nosint /usr/local/bin/nosint
 sudo nosint
 ```
-### [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-%230C8BDC?style=for-the-badge&logo=arch-linux&logoColor=white)](#) Arch: 
+### [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-%230C8BDC?style=for-the-badge&logo=arch-linux&logoColor=white)](#): 
 - Install dependencies: 
 ```
 sudo pacman -Sy git python python-pip
