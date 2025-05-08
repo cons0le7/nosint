@@ -73,7 +73,7 @@ def restore():
         print(f"\nTarget directory '{target_dir}' does not exist. Creating it.")
         os.makedirs(target_dir)
     else:
-        print(f"\nTarget directory '{target_dir}' already exists.")    
+        print("\n")
     if os.path.exists(target_saved_dir):
         restore_response = input(f"\nThe folder '{target_saved_dir}' already exists. \nDuplicate file names will be overwritten. \nDo you want to continue? (y/n): ").strip().lower()
         if restore_response != 'y':
