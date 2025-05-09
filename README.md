@@ -112,5 +112,16 @@ after completion, you have the option to save the response. If you choose yes yo
 - Fetches latest version of tool from GitHub
 - Will completely overwrite tool directoy. Stored token and saved data will not be affected as it is located outside of the repo directory.
 
+## 🗑️ Uninstall 🗑️
+```
+cd $HOME 
+./uninstall.sh
+```
+Executing uninstall.sh will prompt for confirmation to uninstall. If you choose to uninstall, the script will: 
+- Delete the nosint directory at `~/nosint`
+- Remove the symbolic link from whichever path it is in ("/usr/bin/nosint", "/data/data/com.termux/files/usr/bin/nosint" or "/usr/local/bin/nosint") depending on your OS.
+- Give the option to either retain your saved data in `~/.nosint/saved` or not. If you choose to delete saved data the entire `~/.nosint` directory will be deleted.
+- Self destruct after completion. 
+
 
 
