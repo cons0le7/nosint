@@ -115,7 +115,9 @@ after completion, you have the option to save the response. If you choose yes yo
 - Fetches latest version of tool from GitHub
 - Will completely overwrite tool directoy. back up your saved data before updating or you will lose it. Stored token will not be affected as it is located outside of the repo directory.
 
+#### Backup: 
+Moves saved data from `~/nosint/saved` to `~/.nosint/saved` 
 
-
+#### Restore:
 
 
