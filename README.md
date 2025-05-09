@@ -1,7 +1,7 @@
 # NoSINT 
 API wrapper for [NoSINT](https://nosint.org). Works on Arch, Debian, Android with Termux and iOS with iSH Shell.
 
-![Image](https://github.com/user-attachments/assets/8dc14107-9b0a-4fea-bcab-69638480f44e)
+![Image](https://github.com/user-attachments/assets/86ba8d86-d079-47ba-a7d9-fdd64b0a0c8c)
 
 ## ⚠️ Before Installing ⚠️
 You will first need to [Register](https://nosint.org/auth/register) at nosint.org and acquire your API token from  [Dashboard](https://nosint.org/auth/register)
