@@ -109,7 +109,7 @@ The API will stream a series of 5 responses back to you:
 after completion, you have the option to save the response. If you choose yes you will then be prompted to enter file name. Saved responses are stored in `~/nosint/saved` as JSON.
 
 #### Update token: 
-- Gives the option to change the auth token stored in api.key
+- Gives the option to change  authentication token stored in api.key
 
 #### Update tool: 
 - Fetches latest version of tool from GitHub
