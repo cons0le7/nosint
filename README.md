@@ -8,20 +8,35 @@ You will first need to [Register](https://nosint.org/auth/register) at nosint.or
 
 ## 🛠️ Install 🛠️
 
-### [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](#)
-In iSH Shell: 
+### [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-%230C8BDC?style=for-the-badge&logo=arch-linux&logoColor=white)](#)
 - Install dependencies: 
 ```
-apk add git bash python3 py3-pip 
+sudo pacman -Sy git python python-pip
 ```
 - Install tool: 
 ```
-cd $HOME
+cd ~
 git clone https://github.com/cons0le7/nosint.git
-chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
-ln -s $HOME/nosint/nosint /usr/bin/nosint
-nosint
+chmod +x ~/nosint/nosint ~/nosint/update/update.sh ~/nosint/update/update_2.sh
+sudo ln -s ~/nosint/nosint /usr/bin/nosint
+sudo nosint
 ```
+
+### [![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=fff)](#)
+- Install dependencies: 
+```
+sudo apt-get update && apt-get upgrade -y
+sudo apt-get install git python3 python3-pip
+```
+- Install tool: 
+```
+cd ~
+git clone https://github.com/cons0le7/nosint.git
+chmod +x ~/nosint/nosint ~/nosint/update/update.sh ~/nosint/update/update_2.sh
+sudo ln -s ~/nosint/nosint /usr/local/bin/nosint
+sudo nosint
+```
+
 ### [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#)
 In Termux: 
 - Install dependencies: 
@@ -37,34 +52,20 @@ chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/u
 ln -s $HOME/nosint/nosint /data/data/com.termux/files/usr/bin/nosint
 nosint
 ```
-### [![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=fff)](#)
+### [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)](#)
+In iSH Shell: 
 - Install dependencies: 
 ```
-sudo apt-get update && apt-get upgrade -y
-sudo apt-get install git python3 python3-pip
+apk add git bash python3 py3-pip 
 ```
 - Install tool: 
 ```
-cd ~
+cd $HOME
 git clone https://github.com/cons0le7/nosint.git
-chmod +x ~/nosint/nosint ~/nosint/update/update.sh ~/nosint/update/update_2.sh
-sudo ln -s ~/nosint/nosint /usr/local/bin/nosint
-sudo nosint
+chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
+ln -s $HOME/nosint/nosint /usr/bin/nosint
+nosint
 ```
-### [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-%230C8BDC?style=for-the-badge&logo=arch-linux&logoColor=white)](#)
-- Install dependencies: 
-```
-sudo pacman -Sy git python python-pip
-```
-- Install tool: 
-```
-cd ~
-git clone https://github.com/cons0le7/nosint.git
-chmod +x ~/nosint/nosint ~/nosint/update/update.sh ~/nosint/update/update_2.sh
-sudo ln -s ~/nosint/nosint /usr/bin/nosint
-sudo nosint
-```
-
 ## Usage: 
 - Call `nosint` in terminal to execute.
 - When running script for the first time you will be prompted to enter API key. After entering key, you will be asked if you want to save key to file or not.
