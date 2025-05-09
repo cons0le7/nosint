@@ -2,13 +2,13 @@
 
 echo ""
 echo "Are you sure you want to uninstall? (y/n): "
+echo ""
 read -r confirm
 if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
     exit
 fi
 echo ""
 echo "Removing '~/nosint'..."
-echo ""
 rm -rf "$HOME/nosint"
 echo "success"
 echo ""
@@ -19,7 +19,7 @@ symlink_paths=(
 )
 for link_path in "${symlink_paths[@]}"; do
     if [ -L "$link_path" ] || [ -e "$link_path" ]; then
-        echo "Removing $link_path"
+        echo "Removing $link_path ... "
         rm "$link_path"
         echo "success"
     else
@@ -28,7 +28,6 @@ for link_path in "${symlink_paths[@]}"; do
 done
 echo ""
 echo "Deleting stored api.key..."
-echo ""
 rm -f "$HOME/.nosint/api.key"
 echo "success"
 echo ""
