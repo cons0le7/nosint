@@ -12,7 +12,7 @@ You will first need to [Register](https://nosint.org/auth/register) at nosint.or
 In iSH Shell: 
 - Install dependencies: 
 ```
-apk add git bash python3 py3-pip py3-colorama
+apk add git bash python3 py3-pip 
 ```
 - Install tool: 
 ```
@@ -27,7 +27,6 @@ In Termux:
 - Install dependencies: 
 ```
 apt-get install git python3 pip
-pip install colorama
 ```
 - Install tool: 
 ```
@@ -42,7 +41,6 @@ nosint
 ```
 sudo apt-get update
 sudo apt-get install git python3 python3-pip
-pip3 install colorama
 ```
 - Install tool: 
 ```
@@ -56,7 +54,6 @@ sudo nosint
 - Install dependencies: 
 ```
 sudo pacman -Sy git python python-pip
-pip3 install colorama
 ```
 - Install tool: 
 ```
@@ -76,8 +73,6 @@ sudo nosint
 - Search
 - Update Token
 - Update Tool
-- Backup 
-- Restore 
 - Exit
 
 #### Search menu:  
@@ -107,18 +102,14 @@ The API will stream a series of 5 responses back to you:
 - batch_results
 - completed
 
-after completion, you have the option to save the response. If you choose yes you will then be prompted to enter file name. Saved responses are stored in `~/nosint/saved` as JSON.
+after completion, you have the option to save the response. If you choose yes you will then be prompted to enter file name. Saved responses are stored in `~/.nosint/saved` as JSON. 
 
 #### Update token: 
 - Gives the option to change  authentication token stored in api.key
 
 #### Update tool: 
 - Fetches latest version of tool from GitHub
-- Will completely overwrite tool directoy. back up your saved data before updating or you will lose it. Stored token will not be affected as it is located outside of the repo directory.
+- Will completely overwrite tool directoy. Stored token and saved data will not be affected as it is located outside of the repo directory.
 
-#### Backup: 
-Moves saved data from `~/nosint/saved` to `~/.nosint/saved` 
-
-#### Restore:
 
 
