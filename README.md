@@ -18,7 +18,7 @@ apk add git bash python3 py3-pip
 ```
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
-chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
+chmod +x $HOME/nosint/nosint $HOME/nosint/uninstall.sh $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
 ln -s $HOME/nosint/nosint /usr/bin/nosint
 nosint
 ```
@@ -33,7 +33,7 @@ apt-get install git python python-pip
 ```
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
-chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
+chmod +x $HOME/nosint/nosint $HOME/nosint/uninstall.sh $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
 ln -s $HOME/nosint/nosint /data/data/com.termux/files/usr/bin/nosint
 nosint
 ```
@@ -47,7 +47,7 @@ sudo apt-get install git python3 python3-pip
 ```
 cd ~
 git clone https://github.com/cons0le7/nosint.git
-chmod +x ~/nosint/nosint ~/nosint/update/update.sh ~/nosint/update/update_2.sh
+chmod +x ~/nosint/nosint ~/nosint/uninstall.sh ~/nosint/update/update.sh ~/nosint/update/update_2.sh
 sudo ln -s ~/nosint/nosint /usr/local/bin/nosint
 sudo nosint
 ```
@@ -60,7 +60,7 @@ sudo pacman -Sy git python python-pip
 ```
 cd ~
 git clone https://github.com/cons0le7/nosint.git
-chmod +x ~/nosint/nosint ~/nosint/update/update.sh ~/nosint/update/update_2.sh
+chmod +x ~/nosint/nosint ~/nosint/uninstall.sh ~/nosint/update/update.sh ~/nosint/update/update_2.sh
 sudo ln -s ~/nosint/nosint /usr/bin/nosint
 sudo nosint
 ```
