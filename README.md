@@ -111,7 +111,7 @@ after completion, you have the option to save the response. If you choose yes yo
 
 #### Update tool: 
 - Fetches latest version of tool from GitHub
-- Will completely overwrite tool directoy. Stored token and saved data will not be affected as they are located outside of the repo directory.
+- Will completely overwrite tool directoy. Stored token and saved data will not be affected as they are located outside of the tool directory.
 
 ## 🗑️ Uninstall 🗑️
 ```
