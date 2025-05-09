@@ -99,8 +99,8 @@ Info is for each search option is accessible by typing `i` within this menu.
 - Next prompt will ask for a custom search ID which you can use for your own data  management. You can leave this blank to have the search ID auto-generate.
 - Final summary report defaults to yes if no choice is selected. Search begins after entering.
 
-####  Responses 
-The API will stream a series of 5 responses back to you. 
+####  Responses: 
+The API will stream a series of 5 responses back to you: 
 - connecting
 - plugins_discovered
 - search_started
