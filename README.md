@@ -66,6 +66,27 @@ chmod +x ~/nosint/nosint ~/nosint/update.sh ~/nosint/update_2.sh
 sudo ln -s ~/nosint/nosint /usr/bin/nosint
 sudo nosint
 ```
+## Usage: 
+- Call `nosint` in terminal to execute.
+
+### Main menu: 
+- Search
+- Update Token
+- Update Tool
+- Backup Saves
+- Restore Saves
+- Exit
+
+### Search: 
+- Full Name
+- Username/Alias
+- Phone Number
+- Email Address
+- IP Address
+- Domain Name
+- Document URL
+- Discord
+- Minecraft
 
 ## Notes: 
 - If you choose to store token it will be stored in `~/.nosint/api.key`
