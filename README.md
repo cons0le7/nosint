@@ -66,18 +66,21 @@ chmod +x ~/nosint/nosint ~/nosint/update.sh ~/nosint/update_2.sh
 sudo ln -s ~/nosint/nosint /usr/bin/nosint
 sudo nosint
 ```
+
 ## Usage: 
 - Call `nosint` in terminal to execute.
+- When running script for the first time you will be prompted to enter API key. After entering key, you will be asked if you want to save key to file or not.
+- If you choose to store token it will be stored in `~/.nosint/api.key`
 
 ### Main menu: 
 - Search
 - Update Token
 - Update Tool
-- Backup Saves
-- Restore Saves
+- Backup 
+- Restore 
 - Exit
 
-### Search: 
+#### Search: 
 - Full Name
 - Username/Alias
 - Phone Number
@@ -87,7 +90,10 @@ sudo nosint
 - Document URL
 - Discord
 - Minecraft
+Info is for each search option is accessible by typing `i` within this menu.
+
+#### 
 
 ## Notes: 
-- If you choose to store token it will be stored in `~/.nosint/api.key`
+
 - Saved responses are stored in `~/nosint/saved`
