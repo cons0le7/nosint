@@ -11,7 +11,7 @@ You will first need to [Register](https://nosint.org/auth/register) at nosint.or
 ### [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-%230C8BDC?style=for-the-badge&logo=arch-linux&logoColor=white)](#)
 - Install dependencies: 
 ```
-sudo pacman -Sy git python python-pip
+sudo pacman -Syu git python python-pip
 ```
 - Install tool: 
 ```
