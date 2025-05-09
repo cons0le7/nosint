@@ -198,7 +198,7 @@ def info():
 ║ ║ Document URL   ║ Search by Google Document URL              ║ ║
 ║ ║                ║ (e.g., docs.google.com/document/d/...)     ║ ║
 ║ ╠════════════════╬════════════════════════════════════════════╣ ║
-║ ║ Discord ID     ║ Search by Discord username#tag or user ID  ║ ║
+║ ║ Discord        ║ Search by Discord username#tag or user ID  ║ ║
 ║ ║                ║ (e.g., johndoe#1234 or 123456789012345678) ║ ║
 ║ ╠════════════════╬════════════════════════════════════════════╣ ║
 ║ ║ Minecraft      ║ Search by Minecraft username (e.g., Notch) ║ ║
