@@ -7,7 +7,6 @@ import json
 import shutil
 import requests
 import subprocess
-from colorama import init, Fore, Style
 
 base_url = "https://nosint.org/api/stream-search"
 api_key = None
@@ -28,74 +27,16 @@ menu = """
                 ║   [1] Search         ║
                 ║   [2] Update Token   ║
                 ║   [3] Update Tool    ║
-                ║   [4] Backup         ║
-                ║   [5] Restore        ║
                 ║   [x] Exit           ║
                 ╚══════════════════════╝
 """
-def backup():
-    os.system("clear")
-    print(banner)
-    print("\n\n                    <Backup>            ")
-    home_dir = os.path.expanduser("~")
-    source_dir = os.path.join(home_dir, "nosint", "saved")
-    target_dir = os.path.join(home_dir, ".nosint")
-    target_saved_dir = os.path.join(target_dir, "saved")    
-    if not os.path.exists(source_dir):
-        input(f"\nSource directory '{source_dir}' does not exist. Backup cannot proceed. \n\n >>> ")
-        main()    
-    if os.path.exists(target_saved_dir):
-        backup_response = input(f"\nThe folder '{target_saved_dir}' already exists. \nDuplicate file names will be overwritten. \nDo you want to continue? (y/n): ").strip().lower()
-        if backup_response != 'y':
-            print("\nBackup operation canceled. \n\n >>> ")
-            main()
-        print(f"\nRemoving existing folder '{target_saved_dir}'.")
-        shutil.rmtree(target_saved_dir)
-    else:
-        print("\n")    
-    print(f"\nCopying '{source_dir}' to '{target_dir}'.")
-    shutil.copytree(source_dir, target_saved_dir)
-    input("\nBackup completed successfully.\n\n >>> ")
-    main() 
-    
-def restore():
-    os.system("clear")
-    print(banner)
-    print("\n\n                    <Restore>            ")
-    home_dir = os.path.expanduser("~")
-    source_dir = os.path.join(home_dir, ".nosint", "saved")
-    target_dir = os.path.join(home_dir, "nosint")
-    target_saved_dir = os.path.join(target_dir, "saved")    
-    if not os.path.exists(source_dir):
-        input(f"\nSource directory '{source_dir}' does not exist. Restore cannot proceed. \n\n >>> ")
-        main()    
-    if not os.path.exists(target_dir):
-        print(f"\nTarget directory '{target_dir}' does not exist. Creating it.")
-        os.makedirs(target_dir)
-    else:
-        print("\n")
-    if os.path.exists(target_saved_dir):
-        restore_response = input(f"\nThe folder '{target_saved_dir}' already exists. \nDuplicate file names will be overwritten. \nDo you want to continue? (y/n): ").strip().lower()
-        if restore_response != 'y':
-            input("\nRestore operation canceled. \n\n >>> ")
-            main()
-        print(f"\nRemoving existing folder '{target_saved_dir}'.")
-        shutil.rmtree(target_saved_dir)
-    else:
-        print("\n")    
-    print(f"\nMoving '{source_dir}' to '{target_dir}'.")
-    shutil.move(source_dir, target_dir)
-    input("\nRestore completed successfully. \n\n >>> ")
-    main()
     
 def get_api_key():
     os.system("clear")
     print(banner)
     home_dir = os.path.expanduser("~")
     api_file_path = os.path.join(home_dir, ".nosint", "api.key")
-
     api_key = None
-
     nosint_dir = os.path.join(home_dir, ".nosint")
     if not os.path.exists(nosint_dir):
         try:
@@ -159,7 +100,6 @@ def update_token():
 def update_tool():
     os.system("clear")
     print(banner)
-    print("\nUpdating tool will delete saved data. \nMake sure you have backed up your files first.")
     update_tool_choice = input("\nProceed to update? (y/n): \n\n >>> ").strip().lower()
     if update_tool_choice == "y": 
         os.system("clear")
@@ -222,15 +162,11 @@ def main():
         update_token()
     elif menu_choice == "3":
         update_tool()
-    elif menu_choice == "4":
-        backup()
-    elif menu_choice == "5":
-        restore()
     elif menu_choice == "x":
         os.system("clear")
         sys.exit()
     else:
-        input(Fore.RED + "\nInvalid Input. Try Again. " + Style.RESET_ALL)
+        input("\nInvalid Input. Try Again. ")
         os.system("clear")
         main()
 
@@ -287,7 +223,7 @@ def search():
         os.system("clear")
         info()
     else:
-        input(Fore.RED + "\nInvalid Input. Try Again. " + Style.RESET_ALL)
+        input("\nInvalid Input. Try Again. ")
         os.system("clear")
         search()
 
@@ -305,7 +241,7 @@ def search():
     if plugin_type_value in plugin_name_map:
         plugin_print = plugin_name_map[plugin_type_value]
     else:
-        input(Fore.RED + "\nError. " + Style.RESET_ALL)
+        input("\nError. ")
         os.system("clear")
         search()
 
@@ -366,27 +302,26 @@ def search():
             print("Response content:")
             print(response.text)
     except requests.exceptions.RequestException as e:
-        print(f"\nAn error occurred: {e}")
-
+        print(f"\nAn error occurred: {e}") 
+    
     save_choice = input("\nWould you like to save the response? (y/n): ").strip().lower()
     if save_choice == "y":
         file_name = input("Enter file name to save (without extension): ").strip()
         if not file_name:
-             print(Fore.RED + "File name cannot be empty." + Style.RESET_ALL)
+             print("File name cannot be empty.")
         else:
-            save_directory = os.path.join(os.path.expanduser("~"), "nosint", "saved")
+            save_directory = os.path.join(os.path.expanduser("~"), ".nosint", "saved")
             os.makedirs(save_directory, exist_ok=True)
             file_path = os.path.join(save_directory, f"{file_name}.json")
             try:
                 with open(file_path, "w") as f:
                     json.dump(full_response_data, f, indent=2)
-                print(Fore.GREEN + f"Response saved to {file_path}" + Style.RESET_ALL)
+                print(f"Response saved to {file_path}")
             except IOError:
-                print(Fore.RED + f"Error saving file to {file_path}" + Style.RED)
+                print(f"Error saving file to {file_path}")
 
     input("\nPress Enter to return to search menu.")
     search()
 
-init()
 api_key = get_api_key()
 main()
