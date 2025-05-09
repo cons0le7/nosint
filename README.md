@@ -83,7 +83,7 @@ sudo nosint
 #### Search menu:  
 Options: 
 - Full Name - Search by full name (e.g., John Doe)
-- Username/ALias - Search by username (e.g., johndoe)
+- Username/Alias - Search by username (e.g., johndoe)
 - Phone Number - Search by phone number (e.g., +15551234567)
 - Email Address - Search by email address (e.g., john.doe@example.com)
 - IP Address - Search by IP address (e.g., 192.168.1.1)
