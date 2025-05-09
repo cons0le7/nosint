@@ -67,7 +67,7 @@ ln -s $HOME/nosint/nosint /usr/bin/nosint
 nosint
 ```
 ## Usage: 
-- Call `nosint` in terminal to execute.
+- Call `nosint` in terminal to execute if you are on Termux, iSH Shell or if you are root. Use `sudo nosint` otherwise. 
 - When running script for the first time you will be prompted to enter API key. After entering key, you will be asked if you want to save key to file or not.
 - If you choose to store token it will be stored in `~/.nosint/api.key`
 
