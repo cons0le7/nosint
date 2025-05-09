@@ -19,7 +19,7 @@ symlink_paths=(
 )
 for link_path in "${symlink_paths[@]}"; do
     if [ -L "$link_path" ] || [ -e "$link_path" ]; then
-        echo "Removing $link_path ... "
+        echo "Removing '$link_path'... "
         rm "$link_path"
         echo "success"
     else
