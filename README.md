@@ -25,7 +25,7 @@ sudo nosint
 ### [![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=fff)](#)
 - Install dependencies: 
 ```
-sudo apt-get update && apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install git python3 python3-pip
 ```
 - Install tool: 
