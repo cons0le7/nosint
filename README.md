@@ -115,7 +115,7 @@ after completion, you have the option to save the response. If you choose yes yo
 
 ## 🗑️ Uninstall 🗑️
 ```
-cd $HOME
+cd $HOME/nosint
 chmod +x uninstall.sh
 ./uninstall.sh
 ```
