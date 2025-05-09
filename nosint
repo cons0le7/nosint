@@ -28,8 +28,8 @@ menu = """
                 ║   [1] Search         ║
                 ║   [2] Update Token   ║
                 ║   [3] Update Tool    ║
-                ║   [4] Backup Saves   ║
-                ║   [5] Restore Saves  ║
+                ║   [4] Backup         ║
+                ║   [5] Restore        ║
                 ║   [x] Exit           ║
                 ╚══════════════════════╝
 """
@@ -254,7 +254,7 @@ def search():
     ║ ╔════════════════════╗ ╔════════════════════╗ ║
     ║ ║ [1] Full Name      ║ ║ [6] Domain Name    ║ ║
     ║ ║ [2] Username/ALias ║ ║ [7] Document URL   ║ ║
-    ║ ║ [3] Phone Number   ║ ║ [8] Discord ID     ║ ║
+    ║ ║ [3] Phone Number   ║ ║ [8] Discord        ║ ║
     ║ ║ [4] Email Address  ║ ║ [9] Minecraft      ║ ║
     ║ ║ [5] IP Address     ║ ║                    ║ ║
     ║ ╚════════════════════╝ ╚════════════════════╝ ║
