@@ -45,4 +45,3 @@ fi
 echo "" 
 echo "nosint uninstalled successfully." 
 echo ""
-rm -- "$0"
