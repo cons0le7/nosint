@@ -18,7 +18,7 @@ apk add git bash python3 py3-pip
 ```
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
-chmod +x $HOME/nosint/nosint $HOME/nosint/update.sh $HOME/nosint/update_2.sh 
+chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
 ln -s $HOME/nosint/nosint /usr/bin/nosint
 nosint
 ```
@@ -26,27 +26,28 @@ nosint
 In Termux: 
 - Install dependencies: 
 ```
+apt-get update && apt-get upgrade -y
 apt-get install git python python-pip
 ```
 - Install tool: 
 ```
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
-chmod +x $HOME/nosint/nosint $HOME/nosint/update.sh $HOME/nosint/update_2.sh 
+chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
 ln -s $HOME/nosint/nosint /data/data/com.termux/files/usr/bin/nosint
 nosint
 ```
 ### [![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=fff)](#)
 - Install dependencies: 
 ```
-sudo apt-get update
+sudo apt-get update && apt-get upgrade -y
 sudo apt-get install git python3 python3-pip
 ```
 - Install tool: 
 ```
 cd ~
 git clone https://github.com/cons0le7/nosint.git
-chmod +x ~/nosint/nosint ~/nosint/update.sh ~/nosint/update_2.sh
+chmod +x ~/nosint/nosint ~/nosint/update/update.sh ~/nosint/update/update_2.sh
 sudo ln -s ~/nosint/nosint /usr/local/bin/nosint
 sudo nosint
 ```
@@ -59,7 +60,7 @@ sudo pacman -Sy git python python-pip
 ```
 cd ~
 git clone https://github.com/cons0le7/nosint.git
-chmod +x ~/nosint/nosint ~/nosint/update.sh ~/nosint/update_2.sh
+chmod +x ~/nosint/nosint ~/nosint/update/update.sh ~/nosint/update/update_2.sh
 sudo ln -s ~/nosint/nosint /usr/bin/nosint
 sudo nosint
 ```
