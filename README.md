@@ -123,7 +123,3 @@ Executing uninstall.sh will prompt for confirmation. If you choose to uninstall,
 - Delete the nosint directory at `~/nosint`
 - Remove the symbolic link from whichever path it is in ("/usr/bin/nosint", "/data/data/com.termux/files/usr/bin/nosint" or "/usr/local/bin/nosint") depending on your OS.
 - Give the option to either retain your saved data in `~/.nosint/saved` or not. If you choose to delete saved data the entire `~/.nosint` directory will be deleted.
-- Self destruct after completion. 
-
-
-
