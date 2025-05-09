@@ -26,7 +26,7 @@ nosint
 In Termux: 
 - Install dependencies: 
 ```
-apt-get install git python3 pip
+apt-get install git python python-pip
 ```
 - Install tool: 
 ```
