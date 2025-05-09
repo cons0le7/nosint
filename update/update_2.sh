@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chmod +x "$HOME/nosint/update/nosint"
+chmod +x "$HOME/nosint/nosint"
 chmod +x "$HOME/nosint/update/update.sh"
 echo ""
 echo "Update Successful."
