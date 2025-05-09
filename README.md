@@ -80,20 +80,42 @@ sudo nosint
 - Restore 
 - Exit
 
-#### Search: 
-- Full Name
-- Username/Alias
-- Phone Number
-- Email Address
-- IP Address
-- Domain Name
-- Document URL
-- Discord
-- Minecraft
+#### Search menu:  
+Options: 
+- Full Name - Search by full name (e.g., John Doe)
+- Username/ALias - Search by username (e.g., johndoe)
+- Phone Number - Search by phone number (e.g., +15551234567)
+- Email Address - Search by email address (e.g., john.doe@example.com)
+- IP Address - Search by IP address (e.g., 192.168.1.1)
+- Domain Name - Search by domain name (e.g., example.com)
+- Document URL - Search by Google Document URL (e.g., docs.google.com/document/d/...)
+- Discord - Search by Discord username#tag or user ID (e.g., johndoe#1234 or 123456789012345678)
+- Minecraft - Search by Minecraft username (e.g., Notch)
+
 Info is for each search option is accessible by typing `i` within this menu.
 
-#### 
+#### Search process: 
+- After initiating selecting search option you will be prompted to enter your query.  
+- Next prompt will ask for a custom search ID which you can use for your own data  management. You can leave this blank to have the search ID auto-generate.
+- Final summary report defaults to yes if no choice is selected. Search begins after entering.
 
-## Notes: 
+####  Responses 
+The API will stream a series of 5 responses back to you. 
+- connecting
+- plugins_discovered
+- search_started
+- batch_results
+- completed
+after completion, you have the option to save the response. If you choose yes you will then be prompted to enter file name. Saved responses are stored in `~/nosint/saved` as JSON.
 
-- Saved responses are stored in `~/nosint/saved`
+#### Update token: 
+- Gives the option to change the auth token stored in api.key
+
+#### Update tool: 
+- Fetches latest version of tool from GitHub
+- Will completely overwrite tool directoy. back up your saved data before updating or you will lose it. Stored token will not be affected as it is located outside of the repo directory.
+
+
+
+
+
