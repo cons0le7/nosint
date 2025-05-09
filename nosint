@@ -104,7 +104,7 @@ def update_tool():
     if update_tool_choice == "y": 
         os.system("clear")
         print(banner)
-        bash_script_path = os.path.expanduser("~/nosint/update.sh")
+        bash_script_path = os.path.expanduser("~/nosint/update/update.sh")
         subprocess.Popen([bash_script_path])
         sys.exit()
     else: 
