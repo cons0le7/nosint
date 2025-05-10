@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import json
+import math
 import shutil
 import requests
 import subprocess
@@ -27,9 +28,56 @@ menu = """
                 ║   [1] Search         ║
                 ║   [2] Update Token   ║
                 ║   [3] Update Tool    ║
+                ║   [4] View Saved     ║
                 ║   [x] Exit           ║
                 ╚══════════════════════╝
 """
+    
+def open_saved(file_selection):
+    dir_path = os.path.expanduser('~/.nosint/saved')
+    joined_file = file_selection + ".json"
+    file_full_path = os.path.join(dir_path, joined_file)
+    if not os.path.isfile(file_full_path):
+        os.system("clear")
+        print(banner)
+        print(f"\nError: The file '{joined_file}' does not exist in {dir_path}.")
+        input("\n >>> ") 
+        view_saved()
+    command = ['less', file_full_path]
+    subprocess.call(command)
+    view_saved()
+
+def view_saved():
+    os.system("clear")
+    print(banner)
+    print("\n\n                     <Saved data>  \n\n")
+    dir_path = os.path.expanduser("~/.nosint/saved")
+    try:
+        files = os.listdir(dir_path)
+    except FileNotFoundError:
+        print(f"The directory {dir_path} does not exist.")
+        return
+    files = [f for f in files if os.path.isfile(os.path.join(dir_path, f))]
+    files.sort()
+    total_files = len(files)
+    cols = 3
+    rows = math.ceil(total_files / cols)
+    col1 = files[:rows]
+    col2 = files[rows:2*rows]
+    col3 = files[2*rows:]
+    max_len = max(len(col1), len(col2), len(col3))
+    col1 += [''] * (max_len - len(col1))
+    col2 += [''] * (max_len - len(col2))
+    col3 += [''] * (max_len - len(col3))
+    for c1, c2, c3 in zip(col1, col2, col3):
+        print(f"{c1:<22} {c2:<22} {c3} ")
+    print("\n\nType file name without extension or press Enter to go back. ")
+    print("\nAfter file is opened use <Space> for next page, \n<Enter> for next line and <q> to exit file. ")
+    file_selection = input("\n >>> ").strip()
+    if file_selection == "":
+        main()
+    else:
+        open_saved(file_selection)
     
 def get_api_key():
     os.system("clear")
@@ -162,6 +210,8 @@ def main():
         update_token()
     elif menu_choice == "3":
         update_tool()
+    elif menu_choice == "4":
+        view_saved()
     elif menu_choice == "x":
         os.system("clear")
         sys.exit()
