@@ -71,8 +71,24 @@ def view_saved():
     col3 += [''] * (max_len - len(col3))
     for c1, c2, c3 in zip(col1, col2, col3):
         print(f"{c1:<22} {c2:<22} {c3} ")
-    print("\n\nType file name without extension or press Enter to go back. ")
-    print("\nAfter file is opened use <space> for next page, \n<Enter> for next line and <q> to exit file. ")
+    print("\n   Controls to navigate file: ")
+    print("""
+                    <space> - next page            
+                    <b> - previous page
+
+                    <Enter> or <down arrow> - next line
+                    <k> or <up arrow> - previous line 
+
+                    <g> - move to top line          
+                    <G> - move to bottom line
+
+                    Use / + query + Enter to search forwards 
+                    Use ? + query + Enter to search backwards
+                    <n> - find the next occurrence
+                    <N> - find the previous occurrence
+                    <q> - exit
+    """)
+    print("\nType file name without extension or press Enter to go back. ")
     file_selection = input("\n >>> ").strip()
     if file_selection == "":
         main()
