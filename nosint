@@ -72,7 +72,7 @@ def view_saved():
     for c1, c2, c3 in zip(col1, col2, col3):
         print(f"{c1:<22} {c2:<22} {c3} ")
     print("\n\nType file name without extension or press Enter to go back. ")
-    print("\nAfter file is opened use <Space> for next page, \n<Enter> for next line and <q> to exit file. ")
+    print("\nAfter file is opened use <space> for next page, \n<Enter> for next line and <q> to exit file. ")
     file_selection = input("\n >>> ").strip()
     if file_selection == "":
         main()
