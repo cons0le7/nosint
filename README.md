@@ -122,8 +122,11 @@ After file is opened:
 - Use **space** for next page `b` for previous page.
 - Type `g` to move to top line, `G` to move to bottom line.
 - **Enter** for next line, `k` for previous line (or you can use **up arrow** and **down arrow** keys).
-- Use `/` + query + **Enter** to search next occurrence or `?` + query + **Enter** to search previous occurrence within file.
-- Use `q` to exit.
+- Use `/` + query + **Enter** to search forwards.
+- Use `?` + query + **Enter** to search backwards.
+- Type `N` to find next occurrence or `n` to find previous occurrence of query.
+- Type `q` to exit.
+
 
 ## 🗑️ Uninstall 🗑️
 ```
