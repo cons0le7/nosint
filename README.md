@@ -117,7 +117,7 @@ after completion, you have the option to save the response. If you choose yes yo
 #### View Saved: 
 - Lists files in `~/.nosint/saved`
 - Type file name without extension to view using `less` or press **Enter** to return to main menu. 
-- After file is opened use **space** for next page, **Enter** for next line and `q` to exit file.
+- After file is opened use **space** for next page `b` for previous page, `g` to move to top line, `G` to move to bottom line, **Enter** for next line, `k` for previous line (or you can use **up arrow** and **down arrow** keys) use `/` or `?` to then type query and press **Enter** to search within file. Use `q` to exit file.
 
 ## 🗑️ Uninstall 🗑️
 ```
