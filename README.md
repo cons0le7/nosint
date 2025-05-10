@@ -116,8 +116,7 @@ after completion, you have the option to save the response. If you choose yes yo
 
 #### View Saved: 
 - Lists files in `~/.nosint/saved`
-- Type file name without extension to view file using `less`
-- Press Enter to return to main menu. 
+- Type file name without extension to view file using `less` or press Enter to return to main menu. 
 - After file is opened use <space> for next page, <Enter> for next line and <q> to exit file.
 
 ## 🗑️ Uninstall 🗑️
