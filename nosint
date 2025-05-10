@@ -86,6 +86,7 @@ def view_saved():
                     Use ? + query + Enter to search backwards
                     <n> - find the next occurrence
                     <N> - find the previous occurrence
+
                     <q> - exit
     """)
     print("\nType file name without extension or press Enter to go back. ")
