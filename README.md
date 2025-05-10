@@ -115,8 +115,8 @@ after completion, you have the option to save the response. If you choose yes yo
 - Will completely overwrite tool directoy. Stored token and saved data will not be affected as they are located outside of the tool directory.
 
 #### View Saved: 
-Lists files in `~/.nosint/saved`
-Type file name without extension to view using `less` or press **Enter** to return to main menu.
+- Lists files in `~/.nosint/saved`
+- Type file name without extension to view using `less` or press **Enter** to return to main menu.
 
 After file is opened: 
 - Use **space** for next page `b` for previous page.
