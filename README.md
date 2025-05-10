@@ -75,6 +75,7 @@ nosint
 - Search
 - Update Token
 - Update Tool
+- View Saved
 - Exit
 
 #### Search menu:  
@@ -106,12 +107,18 @@ The API will stream a series of 5 responses back to you:
 
 after completion, you have the option to save the response. If you choose yes you will then be prompted to enter file name. Saved responses are stored in `~/.nosint/saved` as JSON. 
 
-#### Update token: 
+#### Update Token: 
 - Gives the option to change  authentication token stored in api.key
 
-#### Update tool: 
+#### Update Tool: 
 - Fetches latest version of tool from GitHub
 - Will completely overwrite tool directoy. Stored token and saved data will not be affected as they are located outside of the tool directory.
+
+#### View Saved: 
+- Lists files in `~/.nosint/saved`
+- Type file name without extension to view file using `less`
+- Press Enter to return to main menu. 
+- After file is opened use <space> for next page, <Enter> for next line and <q> to exit file.
 
 ## 🗑️ Uninstall 🗑️
 ```
