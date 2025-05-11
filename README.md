@@ -90,11 +90,11 @@ Options:
 - Discord - Search by Discord username#tag or user ID (e.g., johndoe#1234 or 123456789012345678)
 - Minecraft - Search by Minecraft username (e.g., Notch)
 
-Info is for each search option is accessible by typing `i` within this menu.
+Info on each option is is accessible by typing `i` within this menu.
 
 #### Search process: 
-- After selecting search option you will be prompted to enter query.  
-- The following prompt will ask for a custom search ID which you can use for your own tracking / record keeping. You can leave this blank to have the search ID auto-generate.
+- After selecting search option you will be prompted to enter your query.  
+- The following prompt will ask for a custom search ID which you can use for your own tracking / record keeping. You can leave this blank to have it auto-generate.
 - Final summary report defaults to yes if no choice is selected. Search begins after entering.
 
 ####  Responses: 
@@ -105,7 +105,7 @@ The API will stream a series of 5 responses back to you:
 - batch_results
 - completed
 
-after completion, you have the option to save the response. If you choose yes you will then be prompted to enter file name. Saved responses are stored in `~/.nosint/saved` as JSON. 
+After completion, you have the option to save the response. If you choose yes, you will then be prompted to enter file name. Saved responses are stored in `~/.nosint/saved` as JSON. 
 
 #### Update Token: 
 - Gives the option to change  authentication token stored in api.key
@@ -125,7 +125,7 @@ After file is opened:
 - Use `/` + query + **Enter** to search forwards.
 - Use `?` + query + **Enter** to search backwards.
 - Type `N` to find next occurrence or `n` to find previous occurrence of query.
-- Type `q` to exit.
+- Type `q` to quit the viewing session and return to the script. 
 
 
 ## 🗑️ Uninstall 🗑️
