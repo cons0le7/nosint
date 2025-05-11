@@ -87,8 +87,8 @@ def view_saved():
                     <n> - find the next occurrence
                     <N> - find the previous occurrence
 
-                    <q> - quit the viewing session and 
-                          return to this menu 
+                    <q> - quit the viewing session  
+                          and return to this menu 
 
     """)
     print("\nType file name without extension or press Enter to go back. ")
