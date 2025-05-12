@@ -137,4 +137,5 @@ chmod +x uninstall.sh
 Executing uninstall.sh will prompt for confirmation. If you choose to uninstall, the script will: 
 - Delete the tool directory at `~/nosint`
 - Remove the symbolic link from whichever path it is in (`/usr/bin/nosint`, `/data/data/com.termux/files/usr/bin/nosint` or `/usr/local/bin/nosint`) depending on your OS.
+- Delete `api.key` in `~/.nosint`
 - Give the option to either retain your saved data in `~/.nosint/saved` or not. If you choose to delete saved data the entire `~/.nosint` directory will be deleted.
