@@ -72,7 +72,7 @@ nosint
 - If you choose to save token it will be stored in `~/.nosint/api.key`
 
 ### Main menu: 
-- Search
+- [Search](https://github.com/cons0le7/nosint?tab=readme-ov-file#search-menu)
 - Update Token
 - Update Tool
 - View Saved
