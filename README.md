@@ -73,9 +73,9 @@ nosint
 
 ### Main menu: 
 - [Search](https://github.com/cons0le7/nosint?tab=readme-ov-file#search-menu)
-- Update Token
-- Update Tool
-- View Saved
+- [Update Token](https://github.com/cons0le7/nosint?tab=readme-ov-file#update-token)
+- [Update Tool](https://github.com/cons0le7/nosint?tab=readme-ov-file#update-tool)
+- [View Saved](https://github.com/cons0le7/nosint?tab=readme-ov-file#view-saved)
 - Exit
 
 #### Search menu:  
