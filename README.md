@@ -139,3 +139,7 @@ Executing uninstall.sh will prompt for confirmation. If you choose to uninstall,
 - Remove the symbolic link from whichever path it is in (`/usr/bin/nosint`, `/data/data/com.termux/files/usr/bin/nosint` or `/usr/local/bin/nosint`) depending on your OS.
 - Delete `api.key` in `~/.nosint`
 - Give the option to either retain your saved data in `~/.nosint/saved` or not. If you choose to delete saved data the entire `~/.nosint` directory will be deleted.
+
+## ⚠️ Disclaimer ⚠️
+
+This tool intended to be used legally and ethically. I do not promote or condone any illegal or criminal activity. I am not responsible for any use or misuse of this tool. 
