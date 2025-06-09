@@ -140,6 +140,6 @@ Executing uninstall.sh will prompt for confirmation. If you choose to uninstall,
 - Delete `api.key` in `~/.nosint`
 - Give the option to either retain your saved data in `~/.nosint/saved` or not. If you choose to delete saved data the entire `~/.nosint` directory will be deleted.
 
-[!Caution]
-> ## ⚠️ Disclaimer ⚠️ <br>
+## ⚠️ Disclaimer ⚠️ 
+> [!Caution]
 > This tool intended to be used legally and ethically. I do not promote or condone any illegal or criminal activity. I am not responsible for any use or misuse of this tool. 
