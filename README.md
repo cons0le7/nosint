@@ -4,7 +4,7 @@ API wrapper for [NoSINT](https://nosint.org). Works on Arch, Debian, Android wit
 ![Image](https://github.com/user-attachments/assets/86ba8d86-d079-47ba-a7d9-fdd64b0a0c8c)
 
 ## ⚠️ Before Installing ⚠️
-You will first need to [register](https://nosint.org/auth/register) at nosint.org to acquire your API token. 
+You will first need to register at [nosint.org](https://nosint.org/auth/register) at  to acquire your API token. 
 
 > [!Warning]
 > This tool intended to be used legally and ethically. I do not promote or condone any illegal or criminal activity. I am not responsible for any use or misuse of this tool. 
