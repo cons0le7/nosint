@@ -66,7 +66,8 @@ apk add git bash python3 py3-pip
 ```
 cd $HOME
 git clone https://github.com/cons0le7/nosint.git
-chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh 
+chmod +x $HOME/nosint/nosint $HOME/nosint/update/update.sh $HOME/nosint/update/update_2.sh
+cp /bin/bash /usr/bin/bash
 ln -s $HOME/nosint/nosint /usr/bin/nosint
 nosint
 ```
