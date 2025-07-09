@@ -124,7 +124,8 @@ def get_api_key():
         except IOError as e:
             print(f"\nError reading $HOME/.nosint/api.key file: {e}.")
 
-    print("\nAPI key not found in $HOME/.nosint/api.key or file was empty/unreadable.")
+    print("\nAPI key not found in $HOME/.nosint/api.key or file was empty/unreadable.") 
+    print("Visit www.nosint.org to acquire token if you do not have one. ")
     api_key = input("\nPlease enter your API key: ").strip()
     if api_key:
         save_key = input(f"\nDo you want to save this API key for future use in {api_file_path}? (y/n): ").lower()
