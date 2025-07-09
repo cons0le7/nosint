@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 HOME_PATH="$HOME/nosint"
 REPO_URL="https://github.com/cons0le7/nosint.git"
