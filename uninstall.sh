@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 echo ""
 echo "Are you sure you want to uninstall? (y/n): "
