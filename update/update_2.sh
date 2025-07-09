@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 chmod +x "$HOME/nosint/nosint"
 chmod +x "$HOME/nosint/update/update.sh"
